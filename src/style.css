@@ -1,0 +1,79 @@
+body{
+	
+	background-image:url("");
+	
+	
+}
+
+#navbar li a{
+	
+	color: darkorange;
+}
+
+#navbar li a:hover{
+	
+	color: orangered;
+}
+
+#navbar li {
+	
+	font-size: 20px;
+	display: inline-block;
+	padding: 20px;
+}
+
+#navbar{
+	font-family: 'Righteous', sans-serif;
+	opacity: 1;
+	margin: 0;
+	text-align: left;
+	border: 10px solid seashell;
+	
+}
+
+main{
+	
+	
+	
+}
+
+.form-container{
+	border: 3px solid;
+	border-color: sienna;
+	border-radius: 10px;
+	margin-top: 20px;
+}
+
+#myform{
+	
+	background-color: gainsboro;
+	margin: 40px;
+	border-radius: 15px;
+}
+
+#myform label,input,select,button {
+	
+	font-size: 20px;
+	font-family: 'Merriweather', serif;
+}
+
+label{
+	 display: inline-block;
+	 padding: 20px;	
+}
+
+input[type=submit]{
+	
+	color: snow;
+	border-radius: 10px;
+	background-color: forestgreen;
+	padding: 20px;
+}
+input[type=submit]:hover{
+	
+	color: lightseagreen;
+	background-color: floralwhite;
+}
+#butn{
+	text-align: center;
+}
