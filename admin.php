@@ -99,11 +99,22 @@
     			die("Connection failed: " . mysqli_connect_error());
 			}
 		
+			if($_SERVER["REQUEST METHOD"] == "POST"){
+				
+				$usrname=$_POST["uname"];
+				$password= /*$_POST["psw"]*/;
+			}
+		
+			$sql = "select * from login";
+		
+			$result = mysqli_query($conn,$sql);
 			
+			
+		?>	
 		
 		<h2>Login Form</h2>
 		
-			<form action="<?php echo htmlspecialchars($_SERVER['PHP_SELF'])?>" method="POST">
+			<form action="report.php" method="POST">
   				<div class="imgcontainer">
     				<img src="https://image.shutterstock.com/image-vector/medical-concept-hospital-building-doctor-450w-588196298.jpg" class="avatar">
   				</div>

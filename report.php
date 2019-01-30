@@ -11,7 +11,7 @@
 			<div class="nav_container">
                 <nav id="navbar">
                     <ul>
-						<li><a href="logout.php" style="text-decoration:none;">LOGOUT</a></li>
+						<li><a href="" style="text-decoration:none;">LOGOUT</a></li>
                     </ul>
                 </nav>
             </div>
@@ -33,10 +33,11 @@
 		
 			$sql_1 = "select distinct count(patient.pat_id), dis_name,locality from has_disease join patient on has_disease.pat_id=patient.pat_id group by locality";
 			$sql_2 = "select dept_name,expens,revenue from hospital_department";
-			$sql_3="";
+			$sql_3=	 "";
 			
 			$result_1=mysqli_query($conn,$sql_1);	
 			$result_2=mysqli_query($conn,$sql_2);
+			$result_3=mysqli_query($conn,$sql_3);
 		?>
 		
 		<style>
@@ -49,12 +50,27 @@
 			div{
 			}
 			
-			table,th,tr,td{
-				border: 1px solid black;
-				font-size: 25px;
-				font-family: 'Merriweather';
+			table{
+				border-collapse: collapse;
+				font-family: 'Merriweather'
 			}
-			th,tr,td{border-radius:8px;}
+			
+			tr:nth-child(even){background-color: #f2f2f2;}
+			
+			td{
+				
+				font-size: 15px;
+			}
+			
+			th{background-color: bisque;color:chocolate;}
+			
+			th,tr{
+				font-size: 25px;
+			}
+			
+			/*tr,th{border:1px solid;border-radius:10px;}*/
+			
+			/*tr{border-radius:8px;}*/
 			
 			.table-1{
 				
@@ -69,7 +85,7 @@
 				margin: 40px auto;
 			}
 			
-			th,tr,td{
+			th,td{
 				
 				padding: 20px;
 			}
@@ -105,7 +121,18 @@
 						<th>DOCTOR NAME</th>
 						<th>MEDICINE</th>
 					</thead>
-				</table>
+					<tbody>
+						<!--</*?php while($row_3=mysqli_fetch_array($result_3)):;?*/>
+						<tr>
+							<td><?php echo $row_3[0]?></td>
+							<td><?php echo $row_3[1]?></td>
+							<td><?php echo $row_3[2]?></td>
+							<td><?php echo $row_3[3]?></td>
+							<td><?php echo $row_3[4]?></td>
+						</tr>
+						</*?php endwhile; ?*/>
+					</tbody>
+				</table>-->
 				
 				<table class="table-3">
 					<thead>

@@ -32,12 +32,17 @@
 	$sql_1 = "insert into patient (pat_name,age,cntct,locality,street) values ('$name','$age','$contct','$street','$local')";
 	$sql_2 = "insert into patient_pin (pin,locality) values ('$pin','$local')";
 	$sql_3 = "insert into hospital_department (dept_name) values ('$dept')";
+
+	if(mysqli_query($conn,$sql_1) && mysqli_query($conn,$sql_2) && mysqli_query($conn,$sql_3)){
+		
+		echo("Data Submitted");
 	
-	echo("tested");
-	//if(mysqli_query($conn,$sql_1) && mysqli_query($conn,$sql_2) && mysqli_query($conn,$sql_3)){
-	
-	// tested;
 	}	
+	
+	else{
+		
+		echo("Error Try Again");
+	}
 ?>
 	
 </body>
