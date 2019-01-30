@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>WELCOME,Zenith Health Systems</title>
+		<link href="src/style.css" rel="stylesheet" type="text/css">
+		<link href="https://fonts.googleapis.com/css?family=Righteous" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Merriweather" rel="stylesheet">
+    </head>
+    
+    <body>
+    
+        <header>
+            <div class="nav_container">
+                <nav id="navbar">
+                    <ul>
+						<li><a href="admin.php" style="text-decoration:none;">ADMIN LOGIN</a></li>
+						<li><a href="index.html" style="text-decoration:none;">HOME</a></li>
+						<!--<li><a href="report.php" style="text-decoration:none;">VIEW REPORTS</a></li> -->
+						
+                    </ul>
+                </nav>
+            </div>
+        </header>
+		
+		<main>
+			<div class="form-container">
+					<form id="myform" action="submit.php" method="POST">
+						<label for="name">PATIENT NAME:</label>
+						<input id="name" name="name" required type="text"><br>
+						<label for="age">AGE:</label>
+						<input id="age" type="number" name="age" required min="1"><br>
+						<label for="pin">PINCODE:</label>
+						<input id="pin" type="number" name="pin" required><br>
+						<label for="local">LOCALITY:</label>
+						<input id="local" name="local" required type="text"><br>
+						<label for="street">STREET NAME:</label>
+						<input id="street" name="street" type="text" required><br>
+						<label for="contct_number">CONTACT NUMBER:</label>
+						<input id="contct_number" name="contct_number" required type="number"><br>
+						<label for="dept">DEPARTMENT:</label>
+						<select name="dept" id="dept">
+							<option value=""></option>
+							<option value=""></option>
+							<option value=""></option>
+							<option value=""></option>
+							<option value=""></option>
+							<option value=""></option>
+						</select><br>
+						<div id="butn">
+						<input type="submit">
+						</div>
+					</form>
+			</div>
+		</main>
+        
+    </body>
+    
+</html>
